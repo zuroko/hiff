@@ -24,8 +24,8 @@ function diff(expected, actual, options) {
   options = prepareOptions(options);
 
   // parse both pieces of HTML with cheerio and get the root nodes
-  $1 = cheerio.load(expected);
-  $2 = cheerio.load(actual);
+  var $1 = cheerio.load(expected);
+  var $2 = cheerio.load(actual);
   var $n1 = node($1, $1.root());
   var $n2 = node($2, $2.root());
 
